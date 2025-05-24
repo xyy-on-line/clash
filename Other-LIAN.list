@@ -29,10 +29,10 @@ DOMAIN-SUFFIX,freessr2.xyz
 DOMAIN-SUFFIX,dtku35.xyz
 DOMAIN-SUFFIX,zhujicn2.net
 DOMAIN-KEYWORD,hongxing
-DOMAIN-SUFFIX,hongxingyunmovie.vip
-DOMAIN-SUFFIX,hongxingdl.vip
-DOMAIN-SUFFIX,hongxingdl.com
-DOMAIN-SUFFIX,hongxingdl.club
-DOMAIN-SUFFIX,hongxing.one
-DOMAIN-SUFFIX,hongxing.love
+#DOMAIN-SUFFIX,hongxingyunmovie.vip
+#DOMAIN-SUFFIX,hongxingdl.vip
+#DOMAIN-SUFFIX,hongxingdl.com
+#DOMAIN-SUFFIX,hongxingdl.club
+#DOMAIN-SUFFIX,hongxing.one
+#DOMAIN-SUFFIX,hongxingdl.love
 
