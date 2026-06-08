@@ -1,5 +1,5 @@
 ;1、域名组
-ruleset=✨ Direct_IPs,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/IP-DIRECT.list
+ruleset=✨ Direct_IPs,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/Direct-IPs.list
 ruleset=✨ AI1,https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI.list
 ruleset=✨ AI2,https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI2.list
 ruleset=📘 GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
