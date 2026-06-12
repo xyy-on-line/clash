@@ -5,8 +5,8 @@
 ;==========================================
 
 ruleset=✨ Direct_IPs,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/Direct-IPs.list
-ruleset=✨ AI+,https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI-1.list
-ruleset=✨ AI+,https://wechat.frank-extend-jacques-oss.best/LM-Firefly/Rules/master/Clash-RuleSet-Classical/PROXY/OpenAI.yaml
+ruleset=✨ AI+,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/AI-1.list
+ruleset=✨ AI+,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/OpenAI.yaml
 ruleset=✨ AI+,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Claude.yaml
 ruleset=📘 GitHub,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY/Github.list
 ruleset=👯‍♂️ TikTok,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/TikTok.yaml
