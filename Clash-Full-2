@@ -1,54 +1,81 @@
 
 
 ;==========================================
+;1、直连需要（包含特定域名与调用两个远程文件）
+;==========================================
+
+;这里的 Local-LAN 和 SteamCN 就是您要调用的两个外部文件
+
+ruleset=Local-LAN,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Special/Local-LAN.list
+ruleset=SteamCN,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/SteamCN/SteamCN.list
+
+;以下是您第一部分原本的直连域名列表，转换成订阅器的 [rules] 专用语法：
+rules=DOMAIN,sub-2025.gwshudong.lol,DIRECT
+rules=RULE-SET,Local-LAN,DIRECT
+rules=RULE-SET,SteamCN,DIRECT
+rules=DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
+rules=DOMAIN-SUFFIX,steamserver.net,DIRECT
+rules=DOMAIN-SUFFIX,steamcontent.com,DIRECT
+rules=DOMAIN-SUFFIX,v.smtcdns.net,DIRECT
+rules=DOMAIN-SUFFIX,snssdk.com,DIRECT
+rules=DOMAIN-SUFFIX,playstation.net,DIRECT
+rules=DOMAIN-SUFFIX,cnlang.org,DIRECT
+rules=DOMAIN-SUFFIX,atlassian.com,DIRECT
+rules=DOMAIN-SUFFIX,download.parallels.com,DIRECT
+
+;==========================================
 ;2、域名组分流 (ruleset)
 ;==========================================
 
 ruleset=✨ Direct_IPs,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/Direct-IPs.list
-ruleset=✨ AI+,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/AI-1.list
-ruleset=✨ AI+,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/OpenAI.yaml
-ruleset=✨ AI+,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Claude.yaml
-ruleset=📘 GitHub,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/PROXY/Github.list
-ruleset=👯‍♂️ TikTok,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/TikTok.yaml
-ruleset=🙋 Telegram,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Telegram.yaml
-ruleset=🕊️ Twitter(X),https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Twitter.yaml
-ruleset=🎞️ YouTube,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/YouTube.yaml
-ruleset=🎞️ YouTube,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
-ruleset=🗣️ Facebook,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Facebook.yaml
-ruleset=🌳 Amazon,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY/Amazon.yaml
-ruleset=🍎 Apple,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Apple/AppleDev.yaml
-ruleset=🍎 Apple,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Apple/AppleFirmware.yaml
-ruleset=🍎 Apple,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Apple/AppleHardware.yaml
-ruleset=🍎 Apple,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Apple/AppleMedia.yaml
-ruleset=🍎 Apple,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Providers/Ruleset/Apple.yaml
-ruleset=Ⓜ️ Microsoft,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Microsoft.yaml
-ruleset=🎮 Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Steam.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Epicgames.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/EA.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Blizzard.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/UBI.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.list
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Nintendo.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Xbox.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Garena.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Gog.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/heads/master/Clash-RuleSet-Classical/Game/HoYoverse.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/OP.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/PlayStation.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Riot.yaml
-ruleset=🕹️ Game,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Game/Rockstar.yaml
-ruleset=📺 Disney,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Global-Services/Disney.list
-ruleset=🎥 Netflix,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/Netflix.yaml
-ruleset=🎬 HBO,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/HBO.yaml
-ruleset=🎵 Spotify,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Global-Services/Spotify.yaml
-ruleset=🌍 国外,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/GlobalMedia.yaml
+ruleset=✨ AI+,https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI-1.list
+ruleset=✨ AI+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
+ruleset=✨ AI+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list
+ruleset=📘 GitHub,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list
+ruleset=👯‍♂️ TikTok,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TikTok/TikTok.list
+ruleset=🙋 Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Telegram/Telegram.list
+ruleset=🕊️ Twitter(X),https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Twitter/Twitter.list
+ruleset=🎞️ YouTube,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list
+ruleset=🗣️ Facebook,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Facebook/Facebook.list
+ruleset=🌳 Amazon,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Amazon/Amazon.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Apple/Apple.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleTV/AppleTV.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleID/AppleID.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleTV/AppleTV.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMail/AppleMail.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleDev/AppleDev.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleNews/AppleNews.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMedia/AppleMedia.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleMusic/AppleMusic.list
+ruleset=🍎 Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/AppleFirmware/AppleFirmware.list
+ruleset=Ⓜ️ Microsoft,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Microsoft/Microsoft.list
+ruleset=🎮 Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Steam/Steam.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Epic/Epic.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/EA/EA.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Blizzard/Blizzard.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/UBI/UBI.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Sony/Sony.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nintendo/Nintendo.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Xbox/Xbox.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Garena/Garena.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gog/Gog.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HoYoverse/HoYoverse.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OP/OP.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PlayStation/PlayStation.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Riot/Riot.list
+ruleset=🕹️ Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Rockstar/Rockstar.list
+ruleset=📺 Disney,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Disney/Disney.list
+ruleset=🎥 Netflix,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Netflix/Netflix.list
+ruleset=🎬 HBO,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HBO/HBO.list
+ruleset=🎵 Spotify,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Spotify/Spotify.list
+ruleset=🌍 国外,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GlobalMedia/GlobalMedia.list
 ruleset=🌍 国外,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
-ruleset=🌍 国外,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/PROXY.yaml
-ruleset=🌍 国外,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Domestic.yaml
+ruleset=🌍 国外,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Proxy/Proxy.list
 ruleset=🌍 国外,https://raw.githubusercontent.com/xyy-on-line/clash/refs/heads/main/Other-LIAN.list
-ruleset=➡️ 国内,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Domestic.yaml
 ruleset=➡️ 国内,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax.list
-ruleset=➡️ 国内,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/CN-IP-ipcidr.yaml
+ruleset=➡️ 国内,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaIPs/ChinaIPs.list
+ruleset=➡️ 国内,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list
+;ruleset=➡️ 国内,https://raw.githubusercontent.com/LM-Firefly/Rules/refs/heads/master/Clash-RuleSet-Classical/Domestic.yaml
 ruleset=➡️ 其它,[]FINAL
 
 ;==========================================
