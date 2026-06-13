@@ -1,1 +1,2 @@
 SRC-IP-CIDR,192.168.20.0/24,no-resolve
+SRC-IP-CIDR,127.0.0.0/24,no-resolve
