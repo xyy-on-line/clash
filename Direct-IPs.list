@@ -1,12 +1,12 @@
 SRC-IP-CIDR,192.168.20.0/24,no-resolve
-
+;控制vlan30段地址的直连11-254
 SRC-IP-CIDR,192.168.30.11/32,no-resolve
 SRC-IP-CIDR,192.168.30.12/30,no-resolve
 SRC-IP-CIDR,192.168.30.16/28,no-resolve
 SRC-IP-CIDR,192.168.30.32/27,no-resolve
 SRC-IP-CIDR,192.168.30.64/26,no-resolve
 SRC-IP-CIDR,192.168.30.128/25,no-resolve
-
+;控制子路由的77地址段直连11-254
 SRC-IP-CIDR,192.168.77.11/32,no-resolve
 SRC-IP-CIDR,192.168.77.12/30,no-resolve
 SRC-IP-CIDR,192.168.77.16/28,no-resolve
