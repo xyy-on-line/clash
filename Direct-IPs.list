@@ -1,5 +1,7 @@
 ;控制vlan20段全网段地址的直连
 SRC-IP-CIDR,192.168.20.0/24,no-resolve
+;控制主路由分配的10全网段地址的直连
+SRC-IP-CIDR,192.168.10.0/24,no-resolve
 
 ;控制vlan30段地址的直连IP地址范围11-254
 SRC-IP-CIDR,192.168.30.11/32,no-resolve
