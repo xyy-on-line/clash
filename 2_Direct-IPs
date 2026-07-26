@@ -16,3 +16,11 @@ SRC-IP-CIDR,192.168.40.16/28,no-resolve
 SRC-IP-CIDR,192.168.40.32/27,no-resolve
 SRC-IP-CIDR,192.168.40.64/26,no-resolve
 SRC-IP-CIDR,192.168.40.128/25,no-resolve
+
+;虚似机47地址段直连地址范围11-254
+SRC-IP-CIDR,192.168.47.11/32,no-resolve
+SRC-IP-CIDR,192.168.47.12/30,no-resolve
+SRC-IP-CIDR,192.168.47.16/28,no-resolve
+SRC-IP-CIDR,192.168.47.32/27,no-resolve
+SRC-IP-CIDR,192.168.47.64/26,no-resolve
+SRC-IP-CIDR,192.168.47.128/25,no-resolve
