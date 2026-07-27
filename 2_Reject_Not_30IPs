@@ -1,2 +1,2 @@
 ;所有192.168.30.0/24的IP均Reject
-(NOT,(SRC-IP-CIDR,192.168.30.0/24)),no-resolve
+SRC-IP-CIDR,192.168.30.0/24,no-resolve
